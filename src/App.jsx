@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from './views/hero'
+import Hero from './views/Hero'
 
 const App = () => {
   return (

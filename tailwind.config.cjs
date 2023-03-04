@@ -5,7 +5,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        saira: ['Saira'],
+        poppins: ['Poppins']
+      },
+      colors: {
+        hero: '#0D031E'
+      }
+    },
   },
   plugins: [],
 }
