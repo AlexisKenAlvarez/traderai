@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import NET from 'vanta/dist/vanta.net.min'
 import * as THREE from 'three'
+import About from './About'
 
 const Hero = () => {
 
@@ -29,9 +30,9 @@ const Hero = () => {
     }, [vantaEffect])
 
     return (
-        <>
+        <div className='overflow-x-hidden'>
 
-            <section className='w-full h-screen bg-hero relative text-white overflow-hidden' ref={myRef}>
+            <section className='w-full h-screen bg-hero relative text-white overflow-x-hidden z-10 overflow-hidden' ref={myRef}>
                 <motion.img initial={{ y: 200, opacity: 0 }} animate={{ opacity: 100, y: 0 }} transition={{ duration: 1 }} alt="HeroRobot" src="/hero.webp" className='absolute bottom-0 lg:right-0 h-full z-10 right-[-15rem] opacity-60 min-w-[45rem]'></motion.img>
 
                 <div className='w-full max-w-[1700px] mx-auto flex items-center h-full lg:px-20 z-10 relative text-center lg:text-left justify-center lg:justify-start'>
@@ -40,7 +41,7 @@ const Hero = () => {
                             <p className="flex gap-x-[2px]">
                                 TRADER A<span className='lg:hidden block'>I</span>
                             </p>
-                            <motion.div initial={{}} animate={{scaleY: [1, 1.5, 1.2, 1.8, 0.8, 1]}} transition={{duration: 13, repeat: Infinity, transformOrigin: "bottom"}} className="h-[4.3rem] w-7 bg-[#8cdb61] rounded-lg relative items-center origin-bottom lg:flex hidden 2xl:mt-5">
+                            <motion.div initial={{}} animate={{ scaleY: [1, 1.5, 1.2, 1.8, 0.8, 1] }} transition={{ duration: 13, repeat: Infinity, transformOrigin: "bottom" }} className="h-[4.3rem] w-7 bg-[#8cdb61] rounded-lg relative items-center origin-bottom lg:flex hidden 2xl:mt-5">
                                 <div className="bg-[#8cdb61] h-1/2 w-[5px] rounded-lg mx-auto -translate-y-full"></div>
                             </motion.div>
                         </motion.div>
@@ -60,9 +61,12 @@ const Hero = () => {
 
                     </div>
                 </div>
+
+                
             </section>
 
-        </>
+            <About />
+        </div>
 
 
 
