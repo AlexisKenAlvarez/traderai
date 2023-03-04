@@ -6,6 +6,9 @@ const App = () => {
   return (
     <div className='bg-hero'>
       <Hero/>
+      <section className='h-screen w-full'>
+
+      </section>
     </div>
   )
 }
