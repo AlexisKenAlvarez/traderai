@@ -29,7 +29,7 @@ const About = () => {
 
     const options = {
         triggerOnce: true,
-        threshold: 0.6
+        threshold: 0.8
     }
 
     const [titleRef, titleView] = useInView(options)
@@ -57,35 +57,38 @@ const About = () => {
             <div className="w-fit mx-auto z-20 relative text-white lg:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
 
                 <div className="w-full flex items-center justify-center">
-                    <motion.div initial={{opacity: 0}} animate={titleView ? {y: [200, 0], opacity: 100} : {}} transition={{ duration: 1.2 }} className="w-[40vh] overflow-hidden">
+                    <motion.div initial={{ opacity: 0 }} animate={titleView ? { y: [200, 0], opacity: 100 } : {}} transition={{ duration: 1.2 }} className="w-[40vh] overflow-hidden">
                         <motion.img initial={{ scale: 1.3 }} animate={titleView ? { scale: 1 } : {}} transition={{ duration: 1.2 }} src="/about.webp" alt="about" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
 
                 <div className="w-full lg:text-right text-center mt-12 lg:mt-0" ref={titleRef}>
                     <div className="font-saira font-bold">
-                        <h3 className='md:text-3xl text-2xl font-semibold'>
-                            <Typewriter
-                                options={{
-                                    strings: ['ABOUT'],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                            />
-                        </h3>
                         <div className="overflow-hidden">
-                            <motion.h1 initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7 }} className='md:text-6xl text-4xl'>TRADER AI</motion.h1>
+                            <motion.h3 initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7 }} className='md:text-3xl text-2xl font-semibold'>
+                                <Typewriter
+                                    options={{
+                                        strings: ['ABOUT'],
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                />
+                            </motion.h3>
+                        </div>
+
+                        <div className="overflow-hidden">
+                            <motion.h1 initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.1 }} className='md:text-6xl text-4xl'>TRADER AI</motion.h1>
                         </div>
                     </div>
 
 
                     <div className="font-poppins mt-5 max-w-[45rem] flex flex-col gap-y-4">
                         <div className="overflow-hidden">
-                            <motion.p initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.1 }} className="">Trader AI is a cognitive platform powered by artificial intelligence that allows traders to leverage the most advanced predictive models available. The platform provides access to automated trading strategies, as well as comprehensive risk management tools designed to help traders make smarter decisions and be more profitable.</motion.p>
+                            <motion.p initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.15 }} className="">Trader AI is a cognitive platform powered by artificial intelligence that allows traders to leverage the most advanced predictive models available. The platform provides access to automated trading strategies, as well as comprehensive risk management tools designed to help traders make smarter decisions and be more profitable.</motion.p>
                         </div>
 
                         <div className="overflow-hidden">
-                            <motion.p initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.15 }} className="">Trader AI introduces AI which trades for you as accurately as possible various cryptocurrencies.</motion.p>
+                            <motion.p initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.2 }} className="">Trader AI introduces AI which trades for you as accurately as possible various cryptocurrencies.</motion.p>
                         </div>
                     </div>
                 </div>
