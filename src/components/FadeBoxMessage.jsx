@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 const FadeBoxMessage = ({ text }) => {
 
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 })
+    
 
     return (
         <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={inView ? { opacity: 100, scale: 1 } : {}} transition={{ duration: 0.6 }} className="h-auto max-w-[50rem] px-8 py-8 bg-boxPurple flex items-center justify-center relative" ref={ref}>
