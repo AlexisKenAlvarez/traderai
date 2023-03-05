@@ -58,8 +58,8 @@ const About = () => {
             <div className="w-fit mx-auto z-20 relative text-white lg:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
 
                 <div className="w-full flex items-center justify-center">
-                    <motion.div initial={{ opacity: 0 }} animate={titleView ? { y: [200, 0], opacity: 100 } : {}} transition={{ duration: 1.2 }} className="w-[40vh] overflow-hidden" ref={imageRef}>
-                        <motion.img initial={{ scale: 1.3 }} animate={imageView ? { scale: 1 } : {}} transition={{ duration: 1.2 }} src="/about.webp" alt="about" className="w-full h-full object-cover" />
+                    <motion.div initial={{}} animate={titleView ? { y: [-15, 15] } : {}} transition={{ duration: 1.2, ease: "linear", repeat: Infinity, repeatType: "reverse" }} className="w-[47vh]" ref={imageRef}>
+                        <img src="/about.webp" alt="about" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
 

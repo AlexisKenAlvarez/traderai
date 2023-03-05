@@ -27,7 +27,7 @@ const Tiersystem = () => {
     ]
 
     return (
-        <section className='w-full h-auto bg-darkbg py-20 text-white'>
+        <section className='w-full h-auto bg-darkbg py-20 text-white bg-trader bg-cover'>
             <div className="max-w-[1500px] px-10 mx-auto w-full">
                 <div className="overflow-hidden w-full" ref={titleRef}>
                     <motion.h1 initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.1 }} className='md:text-8xl text-4xl font-extrabold text-center'>TIER SYSTEM</motion.h1>
@@ -40,7 +40,7 @@ const Tiersystem = () => {
                 <div className="flex w-fit mx-auto gap-x-16 mt-20 lg:flex-row flex-col gap-y-10">
                     {tierList.map((items, i) => {
                         return (
-                            <FadeBox text={items.label} logo={items.logo} key={items} />
+                            <FadeBox text={items.label} logo={items.logo} key={i} />
                         )
                     })}
                 </div>
