@@ -37,7 +37,7 @@ const Nav = () => {
             <div className="max-w-[1600px] w-full h-auto flex items-center justify-between mx-auto z-10 relative">
                 <a href="#home" className='flex items-center gap-x-3 m-4 transition-all ease-in-out duration-300' style={scrolled ? { margin: "0" } : {}}>
                     <img src="/logo.webp" alt="Logo" className="w-14 cursor-pointer" />
-
+                    <h1 className='font-saira font-bold text-2xl'>TRADER AI</h1>
                 </a>
 
                 <ul className={`items-center flex lg:relative fixed right-0 lg:w-auto lg:h-auto w-full h-full top-0 justify-center lg:justify-start flex-col lg:flex-row bg-[#111111] lg:bg-transparent gap-y-12 text-xl lg:text-sm opacity-0 transition-all ease-in-out duration-300 lg:opacity-100 lg:pointer-events-auto pointer-events-none font-saira ${scrolled ? "gap-x-12" : "gap-x-16"}`} style={active ? { opacity: "100%", pointerEvents: "auto" } : {}}>
