@@ -16,11 +16,11 @@ const Tiersystem = () => {
             logo:  <GiRobotAntennas className='text-2xl' /> 
         },
         {
-            label: "Pro",
+            label: "Advanced",
             logo: <GiVintageRobot className='text-2xl' /> 
         },
         {
-            label: "Advanced",
+            label: "Pro",
             logo: <GiRobotGolem className='text-2xl' /> 
         },
         

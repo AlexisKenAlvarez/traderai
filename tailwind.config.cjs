@@ -27,7 +27,8 @@ module.exports = {
       },
       backgroundImage: {
         'trader': "url('/tierbg.webp')",
-        stars: "url('/dapp.webp')"
+        stars: "url('/dapp.webp')",
+        earth: "url('/earth.webp')"
       }
     },
   },
