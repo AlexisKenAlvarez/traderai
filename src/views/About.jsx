@@ -39,7 +39,7 @@ const About = () => {
 
     return (
 
-        <section className='min-h-screen h-auto w-full bg-hero relative z-[12] flex items-center justify-center pb-[10rem]' ref={containerRef}>
+        <section className='min-h-screen h-auto w-full bg-hero relative flex items-center justify-center pb-[10rem]' ref={containerRef}>
 
             <div className="w-[1px] bg-black h-[1px] absolute bottom-[20rem] left-20 shadow-radial"></div>
             <div className="w-[1px] bg-black h-[1px] absolute bottom-[29rem] right-20 shadow-radial"></div>
@@ -55,7 +55,7 @@ const About = () => {
                 })}
             </motion.div>
 
-            <div className="w-fit mx-auto z-20 relative text-white lg:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
+            <div className="w-fit mx-auto  relative text-white lg:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
 
                 <div className="w-full flex items-center justify-center">
                     <motion.div initial={{}} animate={titleView ? { y: [-15, 15] } : {}} transition={{ duration: 1.2, ease: "linear", repeat: Infinity, repeatType: "reverse" }} className="w-[47vh]" ref={imageRef}>

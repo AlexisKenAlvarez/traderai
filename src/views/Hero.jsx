@@ -4,6 +4,7 @@ import NET from 'vanta/dist/vanta.net.min'
 import * as THREE from 'three'
 import About from './About'
 import Button from '../components/Button'
+import Nav from '../components/Nav'
 
 const Hero = () => {
 
@@ -22,7 +23,7 @@ const Hero = () => {
                 scale: 1.00,
                 scaleMobile: 1.00,
                 backgroundColor: 0x0D031E,
-
+                color: 0x03ecf7
             }))
         }
         return () => {
@@ -34,7 +35,10 @@ const Hero = () => {
         <div className='overflow-x-hidden'>
 
             <section className='w-full h-screen bg-hero relative text-white overflow-x-hidden z-10 overflow-hidden' ref={myRef}>
-                <motion.img initial={{ y: 200, opacity: 0 }} animate={{ opacity: 100, y: 0 }} transition={{ duration: 1 }} alt="HeroRobot" src="/hero.webp" className='absolute bottom-0 lg:right-0 h-full z-10 right-[-15rem] min-w-[45rem] sm:block hidden'></motion.img>
+
+                <Nav />
+                
+                <motion.img initial={{ y: 200, opacity: 0 }} animate={{ opacity: 100, y: 0 }} transition={{ duration: 1 }} alt="HeroRobot" src="/hero.webp" className='absolute -bottom-10 lg:right-0 h-full z-10 right-[-15rem] min-w-[45rem] sm:block hidden'></motion.img>
 
                 <div className='w-full max-w-[1700px] mx-auto flex items-center h-full lg:px-20 z-10 relative text-center lg:text-left justify-center lg:justify-start'>
                     <div className=''>
