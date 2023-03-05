@@ -78,7 +78,7 @@ const About = () => {
                         </div>
 
                         <div className="overflow-hidden">
-                            <motion.h1 initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.1 }} className='md:text-6xl text-4xl'>TRADER AI</motion.h1>
+                            <motion.h1 initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.1 }} className='md:text-6xl text-4xl font-extrabold'>TRADER AI</motion.h1>
                         </div>
                     </div>
 
