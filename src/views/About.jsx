@@ -24,15 +24,16 @@ const About = () => {
     })
 
     const x = useTransform(transformSpring, [0, 1], [0, -300])
-    const y = useTransform(transformSpring, [0, 1], [0, -50])
     const scale = useTransform(transformSpring, [0, 1], [1.25, 1])
 
     const options = {
         triggerOnce: true,
-        threshold: 0.8
+        threshold: 0.5
     }
 
     const [titleRef, titleView] = useInView(options)
+    const [imageRef, imageView] = useInView(options)
+
 
 
 
@@ -43,11 +44,11 @@ const About = () => {
             <div className="w-[1px] bg-black h-[1px] absolute bottom-[20rem] left-20 shadow-radial"></div>
             <div className="w-[1px] bg-black h-[1px] absolute bottom-[29rem] right-20 shadow-radial"></div>
 
-            <motion.div initial={{ opacity: 0, rotate: 6 }} animate={view ? { opacity: 100 } : {}} className=" gap-x-5 md:flex hidden absolute top-0 left-0" ref={ref} style={{ x, y }}>
+            <motion.div className=" gap-x-3 md:flex hidden absolute top-0 left-0" ref={ref} style={{ x }}>
                 {imgList.map((items, i) => {
                     return (
 
-                        <div className="overflow-hidden min-w-[30rem] border-4 border-black" key={i}>
+                        <div className="overflow-hidden min-w-[30rem] " key={i}>
                             <motion.img style={{ scale }} src={`${items}.webp`} alt={items} className="w-full h-full object-cover shadow-about origin-center" />
                         </div>
                     )
@@ -57,8 +58,8 @@ const About = () => {
             <div className="w-fit mx-auto z-20 relative text-white lg:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
 
                 <div className="w-full flex items-center justify-center">
-                    <motion.div initial={{ opacity: 0 }} animate={titleView ? { y: [200, 0], opacity: 100 } : {}} transition={{ duration: 1.2 }} className="w-[40vh] overflow-hidden">
-                        <motion.img initial={{ scale: 1.3 }} animate={titleView ? { scale: 1 } : {}} transition={{ duration: 1.2 }} src="/about.webp" alt="about" className="w-full h-full object-cover" />
+                    <motion.div initial={{ opacity: 0 }} animate={titleView ? { y: [200, 0], opacity: 100 } : {}} transition={{ duration: 1.2 }} className="w-[40vh] overflow-hidden" ref={imageRef}>
+                        <motion.img initial={{ scale: 1.3 }} animate={imageView ? { scale: 1 } : {}} transition={{ duration: 1.2 }} src="/about.webp" alt="about" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
 
