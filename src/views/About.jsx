@@ -39,7 +39,7 @@ const About = () => {
 
     return (
 
-        <section className='min-h-screen h-auto w-full bg-hero relative flex items-center justify-center pb-[10rem]' ref={containerRef}>
+        <section className='min-h-screen h-auto w-full bg-hero relative flex items-center justify-center pb-[10rem]' ref={containerRef} id="about">
 
             <div className="w-[1px] bg-black h-[1px] absolute bottom-[20rem] left-20 shadow-radial"></div>
             <div className="w-[1px] bg-black h-[1px] absolute bottom-[29rem] right-20 shadow-radial"></div>
@@ -58,12 +58,12 @@ const About = () => {
             <div className="w-fit mx-auto  relative text-white lg:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
 
                 <div className="w-full flex items-center justify-center">
-                    <motion.div initial={{}} animate={titleView ? { y: [-15, 15] } : {}} transition={{ duration: 1.2, ease: "linear", repeat: Infinity, repeatType: "reverse" }} className="w-[47vh]" ref={imageRef}>
+                    <motion.div initial={{}} animate={titleView ? { y: [-15, 15] } : {}} transition={{ duration: 1.2, ease: "linear", repeat: Infinity, repeatType: "reverse" }} className="sm:w-[52vh] w-[47vh]" ref={imageRef}>
                         <img src="/about.webp" alt="about" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
 
-                <div className="w-full lg:text-right text-center mt-12 lg:mt-0" ref={titleRef}>
+                <div className="w-full lg:text-left text-center mt-12 lg:mt-0" ref={titleRef}>
                     <div className="font-saira font-bold">
                         <div className="overflow-hidden">
                             <motion.h3 initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7 }} className='md:text-3xl text-2xl font-semibold'>

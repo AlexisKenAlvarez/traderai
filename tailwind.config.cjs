@@ -20,13 +20,14 @@ module.exports = {
       boxShadow: {
         'about': '0px 0px 37px 0px rgba(0,0,0,0.65)',
         'radial': '0px 0px 800px 80px #653FA6',
-        'glowy': '0px 0px 500px 10px #653FA6',
-
+        'glowy': '0px 0px 50px 10px #653FA6',
         'fade': '-18px -18px 30px -18px rgba(92,0,255,0.82)',
-        
+        dappglow: '0 0 51px rgb(92, 0, 255,0.70)'
+
       },
       backgroundImage: {
-        'trader': "url('/tierbg.webp')"
+        'trader': "url('/tierbg.webp')",
+        stars: "url('/dapp.webp')"
       }
     },
   },

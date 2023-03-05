@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Nav = () => {
 
-    const list = ['home', 'utility', 'tokenomics', 'roadmap']
+    const list = ['home', 'about', 'tier system', 'tools', 'dapp', 'tokenomics']
     const [active, setActive] = useState(false)
 
     const setToggle = () => {
@@ -32,14 +32,15 @@ const Nav = () => {
     }, []);
 
     return (
-        <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 100 }} transition={{ duration: 0.7 }} className='w-full h-auto lg:h-auto px-10 py-3 text-white z-50 top-0 left-0 absolute' style={active ? {position: "fixed"} : {}}>
+        <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 100 }} transition={{ duration: 0.7 }} className={`w-full h-auto lg:h-auto px-10 py-5 text-white z-[30] top-0 left-0 fixed ${scrolled ? "bg-hero border-b-[1px] border-b-white/[.20]" : ""}`}>
             <div className="absolute w-full h-[120%] top-0 left-0 z-0 shadow-nav opacity-70 transition-all ease-in-out duration-300" style={scrolled ? {} : { opacity: "0%" }}></div>
             <div className="max-w-[1600px] w-full h-auto flex items-center justify-between mx-auto z-10 relative">
-                <a href="#home" className='flex items-center gap-x-2 m-4 transition-all ease-in-out duration-300' style={scrolled ? { margin: "0" } : {}}>
+                <a href="#home" className='flex items-center gap-x-3 m-4 transition-all ease-in-out duration-300' style={scrolled ? { margin: "0" } : {}}>
                     <img src="/logo.webp" alt="Logo" className="w-14 cursor-pointer" />
+
                 </a>
 
-                <ul className={`items-center flex lg:relative fixed right-0 lg:w-auto lg:h-auto w-full h-full top-0 justify-center lg:justify-start flex-col lg:flex-row bg-[#111111] lg:bg-transparent gap-y-20 text-xl lg:text-sm opacity-0 transition-all ease-in-out duration-300 lg:opacity-100 lg:pointer-events-auto pointer-events-none font-saira ${scrolled ? "gap-x-12" : "gap-x-16"}`} style={active ? { opacity: "100%", pointerEvents: "auto" } : {}}>
+                <ul className={`items-center flex lg:relative fixed right-0 lg:w-auto lg:h-auto w-full h-full top-0 justify-center lg:justify-start flex-col lg:flex-row bg-[#111111] lg:bg-transparent gap-y-12 text-xl lg:text-sm opacity-0 transition-all ease-in-out duration-300 lg:opacity-100 lg:pointer-events-auto pointer-events-none font-saira ${scrolled ? "gap-x-12" : "gap-x-16"}`} style={active ? { opacity: "100%", pointerEvents: "auto" } : {}}>
 
                     <li className='absolute lg:hidden block text-4xl top-10 right-10'><RiCloseFill onClick={setToggle} /></li>
                     {list.map((items) => {
