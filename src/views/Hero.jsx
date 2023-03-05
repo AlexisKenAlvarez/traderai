@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import About from './About'
 import Button from '../components/Button'
 import Nav from '../components/Nav'
+import Clock from '../components/Clock'
 
 const Hero = () => {
 
@@ -34,12 +35,12 @@ const Hero = () => {
     return (
         <div className='overflow-x-hidden'>
 
-            <section className='w-full h-screen bg-hero relative text-white overflow-x-hidden z-10 overflow-hidden' ref={myRef}>
+            <section className='w-full min-h-screen h-auto bg-hero relative text-white overflow-x-hidden z-10 overflow-hidden py-10' ref={myRef}>
 
                 <Nav />
 
-                <div className='w-fit mx-auto flex items-center h-full lg:px-20 z-10 relative text-center justify-center lg:justify-start '>
-                    <div className=''>
+                <div className='w-fit mx-auto flex h-full lg:px-20 z-10 relative text-center justify-center lg:justify-start '>
+                    <div className='mt-[5rem] lg:mt-[6rem] 2xl:mt-[8rem]'>
                         <motion.div initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1 }} className='font-saira lg:text-8xl font-black text-4xl 2xl:text-9xl flex items-center gap-x-2 mx-auto w-fit'>
                             <p className="flex gap-x-[2px]">
                                 TRADER A<span className='lg:hidden block'>I</span>
@@ -61,6 +62,8 @@ const Hero = () => {
                                 <p>Chart</p>
                             </motion.button>
                         </div>
+
+                        <Clock/>
 
                     </div>
                 </div>

@@ -53,6 +53,14 @@ const Nav = () => {
                             </div>
                         )
                     })}
+
+                    {/* WHITE PAPER */}
+                    <div className='flex flex-col items-center gap-y-[5px] select-none' >
+                        <a href="" target="_blank" rel="noopener noreferrer" className="peer">
+                            <li className="uppercase font-medium cursor-pointer peer hover:text-header transition-colors ease-in-out duration-300" onClick={() => { setActive(false) }}>Whitepaper</li>
+                        </a>
+                        <div className='h-[2px] w-0 bg-header peer-hover:w-full transition-all ease-in-out duration-300'></div>
+                    </div>
                 </ul>
 
                 <HiMenuAlt3 className='text-4xl block lg:hidden' onClick={setToggle} />
